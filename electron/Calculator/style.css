@@ -1,0 +1,211 @@
+body {
+  background-color: rgb(121, 134, 203);
+  font-family: 'RobotoDraft', sans-serif;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./MaterialIcons-Regular.woff2) format('woff2'),
+       url(./MaterialIcons-Regular.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  src: url(./Roboto-Regular.ttf) format('ttf'),
+       url(./Roboto-Medium.ttf) format('ttf')
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.title-bar {
+  height: 36px;
+  width: 100%;
+  background-color: #eee;  
+  -webkit-app-region: drag;
+}
+.title-bar .md-button {
+  min-width: 30px !important;
+  min-height: 30px !important;
+  height: 30px !important;
+  width: 30px !important;
+  margin: 0 4px 0 0 !important;
+  border-radius: 0px !important;
+  padding: 0px !important;
+  -webkit-app-region: no-drag;
+}
+.title-bar .material-icons {
+  vertical-align: middle;
+  color: #666;
+}
+
+#main {
+  width: 400px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  height: 550px;
+  box-shadow: none !important;
+  margin: 0px !important;
+}
+
+.panel {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  background-color: #636363;
+  color: #D5D5D5;
+}
+
+.controls .md-button {
+  flex: 0 0 66.6px;
+  margin: 0px !important;
+  border-radius: 0px !important;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  width: 300px;
+  background-color: #434343;
+  color: #FDFDFD;
+}
+
+.input .md-button {
+  flex: 0 0 33%;
+  height: 100px;
+  margin: 0px !important;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.disp {
+  padding: 29px 25px;
+  font-size: 36px;
+  height: 32px;
+  text-align: right;
+  color: #737373;
+  background-color: rgb(250, 250, 250);
+  border: 0px !important;
+  width: 350px;
+  transition: all .3s;
+}
+
+.result {
+  padding: 10px 25px;
+  font-size: 32px;
+  height: 40px;
+  text-align: right;
+  color: #8E8E8E;
+  top: 0;
+  position: relative;
+  background-color: rgb(250, 250, 250);
+  transition: all .3s;
+}
+
+.adv {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  right: -280px;
+  font-weight: 400;
+  transition: 0.5s cubic-bezier(.35, 0, .25, 1);
+  background-color: #1DE9B6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
+.adv .md-button {
+  flex: 0 0 33%;
+  height: 100px;
+  margin: 0px !important;
+  font-size: 20px;
+  text-transform: none;
+  font-weight: 400;
+  color: rgb(70, 70, 70);
+}
+
+.adv:hover {
+  transition: 0.5s cubic-bezier(.35, 0, .25, 1);
+  right: 0px;
+}
+
+md-divider {
+  border-top-color: rgb(250, 250, 250) !important;
+}
+
+.circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 32px;
+  border-radius: 50%;
+  background-color: rgb(140, 158, 255);
+  animation: ripple 1s;
+  transition: all .3s ease-out;
+  will-change: opacity;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(18);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(18);
+    opacity: 0;
+  }
+}
+.info {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: white;
+}
