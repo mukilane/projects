@@ -29,5 +29,8 @@
     "angular-aria": "^1.5.8",
     "jquery": "^3.1.1",
     "mathjs": "^3.5.3"
+  },
+  "devDependencies": {
+     "electron": "1.4.15"
   }
 }
