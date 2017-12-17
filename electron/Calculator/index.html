@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html ng-app="CalcApp" >
+<html ng-app="CalcApp">
+
   <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
-    <link rel='stylesheet prefetch' href='./node_modules/angular-material/angular-material.css'>
-    <link rel="stylesheet" href="./style.css">
+    <link rel='stylesheet prefetch' href='./assets/angular-material.min.css'>
+    <link rel="stylesheet" href="./assets/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body ng-cloak layout='column' layout-align='center center' ng-controller='calcCtrl'>
     <div layout='row' layout-align='space-between center ' class='title-bar'>
       <div class='md-subhead' style='padding: 0 16px;color: #666;text-transform: uppercase; font-family: Roboto, sans-serif;
-}'>
+  '>
         Calculator
       </div>
       <div layout='row' layout-align='end center'>
-        <md-button onclick='win.minimize()'><i class="material-icons" style='height: 20px;'>remove</i></md-button>
-        <md-button onclick='win.close()'><i class='material-icons' style="height: 32px;">close</i></md-button>
+        <md-button onclick='win.minimize()'>
+          <i class="material-icons" style='height: 20px;'>remove</i>
+        </md-button>
+        <md-button onclick='win.close()'>
+          <i class='material-icons' style="height: 32px;">close</i>
+        </md-button>
       </div>
     </div>
     <md-card id='main'>
@@ -67,19 +72,20 @@
     </md-card>
     <!--<md-button class='info md-icon-button'><i class='material-icons'>info</i></md-button>-->
   </body>
-  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-  <script src='./node_modules/angular/angular.js'></script>  
+  <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+  <script src='./js/angular.min.js'></script>
   <script src="./index.js"></script>
   <script>
-  // You can also require other files to run in this process
-  require('./renderer.js')
-  require('angular-aria')
-  require('angular-animate')
-  require('angular-material')
-  var math = require('mathjs')
-  var $ = require("jquery");
-  const remote = require('electron').remote;
-  var win = remote.getCurrentWindow();  
+    // You can also require other files to run in this process
+    require('./renderer.js')
+    require('./js/angular-aria.min.js')
+    require('./js/angular-animate.min.js')
+    require('./js/angular-material.min.js')
+    var math = require('./js/math.min.js')
+    var $ = require("./js/jquery.min.js");
+    const remote = require('electron').remote;
+    var win = remote.getCurrentWindow();  
   </script>
   <script>if (window.module) module = window.module;</script>
+
 </html>
