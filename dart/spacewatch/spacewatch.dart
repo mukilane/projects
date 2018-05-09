@@ -28,21 +28,23 @@ void main(List<String> arguments) {
 		..addFlag(object, negatable: false, abbr: 'o');
 	argResults = parser.parse(arguments);
 	List<String> res = argResults.rest;
-	if(res[0] == "isslocation") {
-		getIssLocation();
-	} else if (res[0] == "issoverhead") {
-		geolocate();
-	} else if (res[0] == "peopleinspace") {
-		peopleInSpace();
+	if (res == true) {
+		if (res[0] == "isslocation") {
+			getIssLocation();
+		} else if (res[0] == "issoverhead") {
+			geolocate();
+		} else if (res[0] == "peopleinspace") {
+			peopleInSpace();
+		}
 	} else {
 		print("SpaceWatch");
 		print("A command-line tool for checking space status");
 		print("Usage:");
 		print("To get ISS location");
 		print(r"$ dart spacewatch.dart -o isslocation");
-		print("To get the time of overhead passage of ISS");
+		print("\nTo get the time of overhead passage of ISS");
 		print(r"$ dart spacewatch.dart -o issoverhead");
-		print("To get a list of people in space");
+		print("\nTo get a list of people in space");
 		print(r"$ dart spacewatch.dart -o peopleinspace");
 	}
 }
